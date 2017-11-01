@@ -5,11 +5,16 @@
  */
 package javaapplication2;
 
-/**
- *
- * @author 215CS2010
- */
 public class JavaApplication2 {
- int a = 1;  
-
+ public int Sum(int a,int b){
+     int sum=a;
+     for (int i=a+1; i<=b;i++){
+         
+         sum=sum+a;
+     }
+     return sum;
+ }
 }
+ 
+
+
