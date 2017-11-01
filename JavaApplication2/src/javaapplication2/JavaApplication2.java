@@ -6,6 +6,7 @@
 package javaapplication2;
 
 public class JavaApplication2 {
+
  public int Sum(int a,int b){
      int sum=a;
      for (int i=a+1; i<=b;i++){
@@ -14,6 +15,7 @@ public class JavaApplication2 {
      }
      return sum;
  }
+
 }
  
 
