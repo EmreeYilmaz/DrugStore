@@ -6,7 +6,16 @@
 package javaapplication2;
 
 public class JavaApplication2 {
+<<<<<<< HEAD
 
+=======
+
+ int a = 1;  
+ int b = 1;
+ int sum = a+b ;
+
+
+>>>>>>> 895f2d6f87902a52fd22f7f5ee73428b7faa55dc
     public static void main(String[] args) {
         int a = 1;  
         int b = 1;
@@ -27,8 +36,10 @@ public class JavaApplication2 {
      }
      return sum;
  }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 895f2d6f87902a52fd22f7f5ee73428b7faa55dc
 }
- 
 
 
