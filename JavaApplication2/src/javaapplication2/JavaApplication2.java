@@ -23,6 +23,7 @@ public class JavaApplication2 {
      for (int i=a+1; i<=b;i++){
          
          sum=sum+a;
+         System.out.println(sum);
      }
      return sum;
  }
