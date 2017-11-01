@@ -6,7 +6,7 @@
 package javaapplication2;
 
 public class JavaApplication2 {
-<<<<<<< HEAD
+
     public static void main(String[] args) {
         int a = 1;  
         int b = 1;
@@ -17,8 +17,6 @@ public class JavaApplication2 {
     System.out.println(res*res);
     }
 
-}
-=======
 
  public int Sum(int a,int b){
      int sum=a;
@@ -32,5 +30,4 @@ public class JavaApplication2 {
 }
  
 
->>>>>>> 343d4925a18daeb5adf742e45a9db53e792e5237
 
