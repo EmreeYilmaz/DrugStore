@@ -5,11 +5,8 @@
  */
 package javaapplication2;
 
-/**
- *
- * @author 215CS2010
- */
 public class JavaApplication2 {
+<<<<<<< HEAD
     public static void main(String[] args) {
         int a = 1;  
         int b = 1;
@@ -21,4 +18,19 @@ public class JavaApplication2 {
     }
 
 }
+=======
+
+ public int Sum(int a,int b){
+     int sum=a;
+     for (int i=a+1; i<=b;i++){
+         
+         sum=sum+a;
+     }
+     return sum;
+ }
+
+}
+ 
+
+>>>>>>> 343d4925a18daeb5adf742e45a9db53e792e5237
 
