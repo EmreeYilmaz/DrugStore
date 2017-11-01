@@ -10,11 +10,15 @@ package javaapplication2;
  * @author 215CS2010
  */
 public class JavaApplication2 {
- int a = 1;  
-<<<<<<< HEAD
-int b = 1;
-int c = 2;
-=======
+    public static void main(String[] args) {
+        int a = 1;  
+        int b = 1;
+        int c = 2; 
+    }
+    
+    public void ertosmethod(int res){
+    System.out.println(res*res);
+    }
 
->>>>>>> 38a766839fc83c1b72f2742f8a7db33ae2241228
 }
+
