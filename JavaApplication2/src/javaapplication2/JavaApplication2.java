@@ -10,10 +10,6 @@ package javaapplication2;
  * @author 215CS2010
  */
 public class JavaApplication2 {
-    /**
-     * @param args the command line arguments
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+ int a = 1;  
+
 }
