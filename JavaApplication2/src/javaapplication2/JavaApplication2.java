@@ -11,5 +11,5 @@ package javaapplication2;
  */
 public class JavaApplication2 {
  int a = 1;  
-
+int b = 1;
 }
