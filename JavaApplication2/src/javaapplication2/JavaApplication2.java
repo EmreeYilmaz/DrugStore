@@ -11,6 +11,10 @@ package javaapplication2;
  */
 public class JavaApplication2 {
  int a = 1;  
+<<<<<<< HEAD
 int b = 1;
 int c = 2;
+=======
+
+>>>>>>> 38a766839fc83c1b72f2742f8a7db33ae2241228
 }
