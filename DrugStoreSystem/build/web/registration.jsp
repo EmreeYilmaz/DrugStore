@@ -15,7 +15,7 @@
     int i = st.executeUpdate("insert into user_info(firstname,lastname,email,password,type)values('"+fname+"','"+lname+"','"+email+"','"+password+"','"+type+"')");
     
     if(i>0){
-        response.sendRedirect("index.html");
+        response.sendRedirect("login.html");
     }
     else{
         
