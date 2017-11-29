@@ -12,7 +12,7 @@
         session.setAttribute("email", userEmail);
         //out.println("welcome " + userid);
         //out.println("<a href='logout.jsp'>Log out</a>");
-        response.sendRedirect("successmessage.jsp");
+        response.sendRedirect("MainPage.html");
     } else {
         out.println("Invalid password <a href='index.jsp'>try again</a>");
     }
