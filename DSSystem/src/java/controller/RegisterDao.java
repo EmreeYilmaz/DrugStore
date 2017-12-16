@@ -15,7 +15,7 @@ public class RegisterDao {
             ps.setString(3, u.getEmail());
             ps.setString(4, u.getPassword());
             ps.setString(5, u.getType());
-
+            
             status = ps.executeUpdate();
         } catch (Exception e) {
             System.out.println(e.getMessage());
