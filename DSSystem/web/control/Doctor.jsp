@@ -7,8 +7,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Law Firm</title>
+        <title>Drug Store</title>
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" /> 
     </head>
     <body>
         <%
@@ -19,54 +20,37 @@
             String firstname = dbbean.takeDoctorName(email);
         %>
 
-        <div class="featured">
-            <h2>Drugs</h2>
-            <ul class="clearfix">
-                <li>
-                    <div class="frame1">
-                        <div class="box">
-                            <img src="images/meeting.jpg" alt="Img" height="130" width="197">
-                        </div>
-                    </div>
-                    <p>
-                        <b>Drug 1
-                    </p>
-                    <a href="index.html" class="more">Add To Cart</a>
-                </li>
-                <li>
-                    <div class="frame1">
-                        <div class="box">
-                            <img src="images/handshake.jpg" alt="Img" height="130" width="197">
-                        </div>
-                    </div>
-                    <p>
-                        <b>Drug 2
-                    </p>
-                    <a href="index.html" class="more">Add To Cart</a>
-                </li>
-                <li>
-                    <div class="frame1">
-                        <div class="box">
-                            <img src="images/smile.jpg" alt="Img" height="130" width="197">
-                        </div>
-                    </div>
-                    <p>
-                        <b>Drug 3
-                    </p>
-                    <a href="index.html" class="more">Add To Cart</a>
-                </li>
-                <li>
-                    <div class="frame1">
-                        <div class="box">
-                            <img src="images/family-small.jpg" alt="Img" height="130" width="197">
-                        </div>
-                    </div>
-                    <p>
-                        <b>Drug 4
-                    </p>
-                    <a href="index.html" class="more">Add To Cart</a>
-                </li>
-            </ul>
+        <div id="header">
+            <div class="clearfix">
+                <div class="logo">
+                    <a href="index.html" title="fff"></a>
+                </div>
+                <ul class="navigation">
+                    <li>
+                        <a href="Register.html">Doctor: <%= firstname%></a>
+
+                    </li>
+
+                    <li>
+                        <a href="Register.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="contents">
+            <div class="clearfix">
+                <div class="main">
+                    <h1>Doctor Main Page</h1>
+                    <form action="CreationPrescriptionPage.jsp" method="post" class="message">
+
+                        <br> <input type="submit" value="Create Prescription"></br>
+                        <br>  <input type="submit" value="Prescription List"></br>
+
+
+                    </form>
+                </div>
+            </div>
         </div>
 
     </body>
