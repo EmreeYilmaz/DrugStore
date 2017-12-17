@@ -42,14 +42,17 @@
             <div class="clearfix">
                 <div class="main">
                     <h1>Doctor Main Page</h1>
+
                     <form action="CreationPrescriptionPage.jsp" method="post" class="message">
-
                         <br> <input type="submit" value="Create Prescription"></br>
-                        &nbsp;
-                        <br>  <input type="submit" value="Prescription List"></br>
-
 
                     </form>
+
+                    <form action="ListPrescription.jsp" method="post" class="message">
+                        <br> <input type="submit" value="ListPrescription"></br>
+
+                    </form>
+
                 </div>
             </div>
         </div>

@@ -37,6 +37,13 @@ img {
 	height:1%;
 	visibility:hidden;
 }
+
+/* default tables */ 
+table, th, td {
+    border: 1px solid black;
+}
+
+
 /*------------ Sprites ------------*/
 .more, .subscribe, input[type='submit'] {
 	background: url(../images/interface.png) no-repeat;

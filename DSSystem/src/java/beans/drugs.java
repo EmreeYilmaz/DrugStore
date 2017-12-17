@@ -1,18 +1,20 @@
 package beans;
 
 
-public class drugs {
 
-    private String drugName;
+public class Drugs {
+
+    private String userID;
     private String prescriptionID;
-    private String dateInfo;
+    private String drugName;
+    
 
-    public String getDrugName() {
-        return drugName;
+    public String getUserID() {
+        return userID;
     }
 
-    public void setDrugName(String drugName) {
-        this.drugName = drugName;
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
     public String getPrescriptionID() {
@@ -23,16 +25,13 @@ public class drugs {
         this.prescriptionID = prescriptionID;
     }
 
-   
-    public String getDateInfo() {
-        return dateInfo;
+    public String getDrugName() {
+        return drugName;
     }
 
-   
-    public void setDateInfo(String dateInfo) {
-        this.dateInfo = dateInfo;
+    public void setDrugName(String drugName) {
+        this.drugName = drugName;
     }
 
-   
 
 }

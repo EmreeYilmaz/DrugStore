@@ -1,34 +1,43 @@
 package controller;
 
+import beans.Drugs;
 import java.sql.*;
 import database.ConnectionProvider;
+import java.util.ArrayList;
+import java.util.*;
+import java.util.logging.*;
 
 public class PrescriptionDao {
 
-    public static int createPrescription(beans.drugs d) {
-        int status = 0;
+    public static void createPrescription(beans.Drugs d) {
+
+        String userid = d.getUserID();
+        String prescriptionid = d.getPrescriptionID();
+        String drugname = d.getDrugName();
+
         try {
             Connection con = ConnectionProvider.getCon();
-            PreparedStatement ps = con.prepareStatement("insert into yeni_tablo(prescriptionid,drugname) values(?,?)");
-            ps.setString(1, d.getPrescriptionID());
-            ps.setString(2, d.getDrugName());
-          
+            PreparedStatement ps = con.prepareStatement("insert into prescriptions(userID,prescriptionID,drugname) values(?,?,?)");
+            ps.setString(1, userid);
+            ps.setString(2, prescriptionid);
+            ps.setString(3, drugname);
 
-            status = ps.executeUpdate();
+            ps.executeUpdate();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return status;
-    }
-    
-       public String takeDoctorName(String email) throws SQLException {
-        Connection con = ConnectionProvider.getCon();
-        ResultSet rs;
-        PreparedStatement ps = con.prepareStatement("select firstname from user_info where email = ?");
-        ps.setString(1, email);
-        rs = ps.executeQuery();
-        rs.first();
 
-        return rs.getString("firstname");
     }
+
+    public static ResultSet takeAllPrescription() throws SQLException {
+
+        Connection con = ConnectionProvider.getCon();
+
+        PreparedStatement pstmt = con.prepareStatement("select * from prescriptions");
+
+        ResultSet rs = pstmt.executeQuery();
+
+        return rs;
+    }
+
 }

@@ -1,4 +1,3 @@
-<%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id = "dbbean" scope = "session" class = "controller.LoginDao" >
 </jsp:useBean>

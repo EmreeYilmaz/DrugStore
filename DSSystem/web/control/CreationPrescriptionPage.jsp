@@ -1,8 +1,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean id = "dbbean" scope = "session" class = "controller.PrescriptionDao" >
+<%@page import="controller.PrescriptionDao"%>
+<jsp:useBean id = "dbbean" scope = "session" class = "controller.LoginDao" >
 </jsp:useBean>
 <jsp:setProperty name = "dbbean" property = "*" />
 
+<jsp:useBean id = "drug" class = "beans.Drugs" >
+</jsp:useBean>
+<jsp:setProperty name = "drug" property = "*" />
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,8 +22,17 @@
             }
             String email = (String) session.getAttribute("email");
             String firstname = dbbean.takeDoctorName(email);
-        %>
+        %> 
+        <%
+            String userid = request.getParameter("userID");
+            String prescriptionid = request.getParameter("prescriptionID");
+            String drugname = request.getParameter("drugName");
 
+            if (prescriptionid != null && drugname != null) {
+                System.out.println("presid: " + prescriptionid + " drgunmae: " + drugname);
+                PrescriptionDao.createPrescription(drug);
+            }
+        %>
         <div id="header">
             <div class="clearfix">
                 <div class="logo">
@@ -42,15 +55,19 @@
             <div class="clearfix">
                 <div class="main">
                     <h1>Create Prescription</h1>
-                    <form action="control/CreatePrescription.jsp" method="post" class="message">
+                    <form action="CreationPrescriptionPage.jsp" method="post" class="message">
+
+                        <label>User ID: </label>
+                        <input type="text" name="userID"  placeholder="Prescription ID" onclick=" this.value = ''"/>
+
                         <label>Prescription ID: </label>
-                        <input type="text" name="prescriptionid"  placeholder="Prescription ID" onclick=" this.value = ''"/>
+                        <input type="text" name="prescriptionID"  placeholder="Prescription ID" onclick=" this.value = ''"/>
 
                         <label>Drug Name:  </label>
-                        <input type="text" name="drugname"  placeholder="Drug Name" onclick=" this.value = ''"/>
+                        <br>   <input type="text" name="drugName"  placeholder="Drug Name" onclick=" this.value = ''"/></br>
 
                         &nbsp;
-                        <br> <input type="submit" name ="create" value="Create"></br>
+                        <br> <input type="submit" name ="create" value="Create" ></br>
                     </form>
                 </div>
             </div>
