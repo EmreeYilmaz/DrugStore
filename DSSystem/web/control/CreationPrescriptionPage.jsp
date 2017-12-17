@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean id = "dbbean" scope = "session" class = "controller.LoginDao" >
+<jsp:useBean id = "dbbean" scope = "session" class = "controller.PrescriptionDao" >
 </jsp:useBean>
 <jsp:setProperty name = "dbbean" property = "*" />
 
@@ -41,21 +41,16 @@
         <div id="contents">
             <div class="clearfix">
                 <div class="main">
-                    <h1>Login</h1>
-                    <form action="control/Login.jsp" method="post" class="message">
-                        <label>E-mail: </label>
-                        <input type="text" name="email"  placeholder="E-mail" onclick=" this.value = ''"/>
+                    <h1>Create Prescription</h1>
+                    <form action="control/CreatePrescription.jsp" method="post" class="message">
+                        <label>Prescription ID: </label>
+                        <input type="text" name="prescriptionid"  placeholder="Prescription ID" onclick=" this.value = ''"/>
 
-                        <label>Password: </label>
-                        <input type="text" name="password"  placeholder="Password" onclick=" this.value = ''"/>
+                        <label>Drug Name:  </label>
+                        <input type="text" name="drugname"  placeholder="Drug Name" onclick=" this.value = ''"/>
 
-                        <label>User Type :</label>   
-
-                        <input type="radio" name="usertype" value="1">User<br>
-                        <input type="radio" name="usertype" value="2" checked>Doctor<br>
-
-
-                        <input type="submit" value="Login">
+                        &nbsp;
+                        <br> <input type="submit" name ="create" value="Create"></br>
                     </form>
                 </div>
             </div>

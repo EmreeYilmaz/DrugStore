@@ -45,6 +45,7 @@
                     <form action="CreationPrescriptionPage.jsp" method="post" class="message">
 
                         <br> <input type="submit" value="Create Prescription"></br>
+                        &nbsp;
                         <br>  <input type="submit" value="Prescription List"></br>
 
 

@@ -22,19 +22,19 @@
     <%  if( check == 1 ) {
             if( dbbean.login(email,password) ){
                 session.setAttribute("email", email);
-                response.sendRedirect("User.jsp");
+                response.sendRedirect("Doctor.jsp");
             } else {%>
-                <jsp:forward page="LoginError.html"/>
+                <jsp:forward page="index.html"/>
             <%}
         } else if ( check == 2 ) {
             if( dbbean.login(email,password) ){
                 session.setAttribute("email", email);
                 response.sendRedirect("Doctor.jsp");
             } else {%>
-                <jsp:forward page="LoginError.html"/>
+                <jsp:forward page="index.html"/>
             <%}
         } else {%>
-            <jsp:forward page="loginerror.html"/>
+            <jsp:forward page="index.html"/>
         <%}%>        
 </body>
 </html>
