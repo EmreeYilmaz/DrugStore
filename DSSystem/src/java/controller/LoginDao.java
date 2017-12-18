@@ -22,7 +22,7 @@ public class LoginDao {
         }
     }
 
-    public String takeDoctorName(String email) throws SQLException {
+    public   String takeDoctorName(String email) throws SQLException {
         Connection con = ConnectionProvider.getCon();
         ResultSet rs;
         PreparedStatement ps = con.prepareStatement("select firstname from user_info where email = ?");
@@ -33,5 +33,22 @@ public class LoginDao {
         return rs.getString("firstname");
     }
 
+    public static boolean editDoctor(String email) throws SQLException {
+        try {
+            Connection con = ConnectionProvider.getCon();
+            ResultSet rs;
+
+            PreparedStatement ps = con.prepareStatement("update user_info set firstname = ?, lastname = ?, email = ?, password = ?");
+
+            ps.setString(1, email);
+       
+
+            ps.executeUpdate();
+        } catch (Exception ex) {
+            System.out.println("Exception: " + ex.getMessage());
+            return false;
+        }
+        return true;
+    }
 
 }

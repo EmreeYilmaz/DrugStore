@@ -46,7 +46,7 @@
             <div class="clearfix">
                 <div class="main">
                     <h1>All Prescriptions</h1>
-                    <form action="CreationPrescriptionPage.jsp" method="post" class="message">
+                    <form action="DeletePrescription.jsp" method="post" class="message">
                         <table>
 
                             <tr>

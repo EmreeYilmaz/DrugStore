@@ -1,7 +1,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <jsp:useBean id = "dbbean" scope = "session" class = "controller.LoginDao" >
 </jsp:useBean>
-<jsp:setProperty name = "dbbean" property = "*" />
+
+<jsp:useBean id = "user" scope = "session" class = "beans.User" >
+</jsp:useBean>
+<jsp:setProperty name = "user" property = "*" />
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +22,10 @@
             }
             String email = (String) session.getAttribute("email");
             String firstname = dbbean.takeDoctorName(email);
+
         %>
+
+
 
         <div id="header">
             <div class="clearfix">
@@ -42,7 +49,7 @@
             <div class="clearfix">
                 <div class="main">
                     <h1>Edit Doctor Profile</h1>
-                    <form action="controller/Registration.jsp" method="post" class="message">
+                    <form action="UpdateDoctor.jsp" method="post" class="message">
                         <label>First Name: </label>
                         <input type="text" name="firstName"  placeholder="First Name" onclick=" this.value = ''"/><br/> 
 
