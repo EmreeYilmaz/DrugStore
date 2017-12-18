@@ -41,18 +41,22 @@
         <div id="contents">
             <div class="clearfix">
                 <div class="main">
-                    <h1>Doctor Main Page</h1>
+                    <h1>Edit Doctor Profile</h1>
+                    <form action="controller/Registration.jsp" method="post" class="message">
+                        <label>First Name: </label>
+                        <input type="text" name="firstName"  placeholder="First Name" onclick=" this.value = ''"/><br/> 
 
-                    <form action="CreationPrescriptionPage.jsp" method="post" class="message">
-                        <br> <input type="submit" value="Create Prescription"></br>
+                        <label>Last Name: </label>
+                        <input type="text" name="lastName"  placeholder="Last Name" onclick=" this.value = ''"/><br/> 
 
+                        <label>E-mail: </label>
+                        <input type="text" name="email"  placeholder="E-mail" onclick=" this.value = ''"/><br/>  
+
+                        <label>Password: </label>
+                        <input type="text" name="password"  placeholder="Password" onclick=" this.value = ''"/><br/>  
+
+                        <input type="submit" value="Register">
                     </form>
-
-                    <form action="ListPrescription.jsp" method="post" class="message">
-                        <br> <input type="submit" value="ListPrescription"></br>
-
-                    </form>
-
                 </div>
             </div>
         </div>

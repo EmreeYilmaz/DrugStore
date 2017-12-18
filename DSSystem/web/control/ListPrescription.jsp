@@ -33,7 +33,7 @@
                 </div>
                 <ul class="navigation">
                     <li>
-                        <a href="Register.html">Doctor: <%= firstname%></a>
+                        <a href="DoctorProfile.jsp">Doctor: <%= firstname%></a>
 
                     </li>
 
