@@ -30,7 +30,7 @@
                 </div>
                 <ul class="navigation">
                     <li>
-                        <a href="Register.html">Doctor: <%= firstname%></a>
+                        <a href="DoctorProfile.jsp">Doctor: <%= firstname%></a>
 
                     </li>
 
@@ -46,7 +46,7 @@
             <div class="clearfix">
                 <div class="main">
                     <h1>All Prescriptions</h1>
-                    <form action="CreationPrescriptionPage.jsp" method="post" class="message">
+                    <form action="DeletePrescription.jsp" method="post" class="message">
                         <table>
 
                             <tr>

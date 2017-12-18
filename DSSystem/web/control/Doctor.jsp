@@ -27,12 +27,12 @@
                 </div>
                 <ul class="navigation">
                     <li>
-                        <a href="Register.html">Doctor: <%= firstname%></a>
+                        <a href="DoctorProfile.jsp">Doctor: <%= firstname%></a>
 
                     </li>
 
                     <li>
-                        <a href="Register.html">Logout</a>
+                        <a href="addDrugPage.jsp">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -49,6 +49,10 @@
                     </form>
 
                     <form action="ListPrescription.jsp" method="post" class="message">
+                        <br> <input type="submit" value="ListPrescription"></br>
+
+                    </form>
+                    <form action="maşnpage.jsp" method="post" class="message">
                         <br> <input type="submit" value="ListPrescription"></br>
 
                     </form>

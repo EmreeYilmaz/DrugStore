@@ -10,17 +10,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css" />
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/tableStyle.css" />
-        <title>All Drugs</title>
+        <title>All Donations</title>
     </head>
     <body>
-        
-       <%
-      
+        <%
+            if (session.getAttribute("email") == null) {
+                response.sendRedirect("drugspage.html");
+            }
+
             ResultSet table = DrugDao.takeAllDrug();
 
         %>
-        
-        
         <div id="header">
             <div class="clearfix">
                 <div class="logo">
@@ -39,7 +39,7 @@
         <div id="contents">
             <div class="clearfix">
                 <div class="main">
-                    <h1>All Drugs</h1>
+                    <h1>All Prescriptions</h1>
                     <form action="addDrugPage.jsp" method="post" class="message">
                         <table>
 
@@ -63,7 +63,7 @@
                                     <%out.print(table.getString("prescriptionID"));%> 
                                 </td>
                                 <td>            
-                                    <%out.print(table.getString("drugName"));%> 
+                                    <%out.print(table.getString("prescriptionID"));%> 
                                 </td>
                                 <td>
                                     <%out.print(table.getString("type"));%>           

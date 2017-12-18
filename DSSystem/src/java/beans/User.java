@@ -8,9 +8,6 @@ public class User {
     private String password;
     private String type;
 
- 
-
-    
     public String getFirstName() {
         return firstName;
     }
