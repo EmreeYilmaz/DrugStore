@@ -40,4 +40,20 @@ public class PrescriptionDao {
         return rs;
     }
 
+    public static boolean deletePrescription(String id) throws SQLException {
+        try {
+
+            Connection con = ConnectionProvider.getCon();
+           
+            PreparedStatement pstmt = con.prepareStatement("delete from prescriptions where userID = ?");
+            pstmt.setString(1, id);
+            pstmt.executeUpdate();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
 }

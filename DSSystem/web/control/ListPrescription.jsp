@@ -22,7 +22,10 @@
 
             ResultSet table = PrescriptionDao.takeAllPrescription();
 
+
         %>
+
+
         <div id="header">
             <div class="clearfix">
                 <div class="logo">
@@ -46,7 +49,7 @@
             <div class="clearfix">
                 <div class="main">
                     <h1>All Prescriptions</h1>
-                    <form action="CreationPrescriptionPage.jsp" method="post" class="message">
+                    <form action="DeletePrescription.jsp" method="post" class="message">
                         <table>
 
                             <tr>
@@ -71,7 +74,7 @@
                                     <%out.print(table.getString("drugname"));%>           
                                 </td>
                                 <td>            
-                                    <input type="radio" name="uid" value="">
+                                    <input type="radio" name="userID" value="<%out.print(table.getString("userID"));%>"> <%out.print(table.getString("userID"));%>
                                 </td>
                             </tr>
                             <%}%>
@@ -79,9 +82,13 @@
 
                         &nbsp;
 
-                        <center><p><input type = "submit" name = "Submit" value = "Delete"/></p></center>
+
+                        <center><p><input type = "submit" name = "Delete" value = "Delete"/></p></center>
+
+
 
                     </form>
+
 
                 </div>
             </div>
@@ -89,3 +96,4 @@
 
     </body>
 </html>
+
