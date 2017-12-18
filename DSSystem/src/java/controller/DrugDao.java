@@ -1,26 +1,29 @@
 package controller;
 
-import beans.Prescription;
+import beans.Drug;
 import java.sql.*;
 import database.ConnectionProvider;
 import java.util.ArrayList;
 import java.util.*;
 import java.util.logging.*;
 
-public class PrescriptionDao {
+public class DrugDao {
 
-    public static void createPrescription(beans.Prescription d) {
+    public static void addDrug(beans.Drug d) {
 
-        String userid = d.getUserID();
+        
         String prescriptionid = d.getPrescriptionID();
         String drugname = d.getDrugName();
+        String type = d.getType();
+        String date = d.getDate();
 
         try {
             Connection con = ConnectionProvider.getCon();
-            PreparedStatement ps = con.prepareStatement("insert into prescriptions(userID,prescriptionID,drugname) values(?,?,?)");
-            ps.setString(1, userid);
-            ps.setString(2, prescriptionid);
-            ps.setString(3, drugname);
+            PreparedStatement ps = con.prepareStatement("insert into drug(prescriptionID,drugName,type,date) values(?,?,?,?)");
+            ps.setString(1, prescriptionid);
+            ps.setString(2, drugname);
+            ps.setString(3, type);
+            ps.setString(4, date);
 
             ps.executeUpdate();
         } catch (Exception e) {
