@@ -2,7 +2,7 @@ package beans;
 
 
 
-public class Drugs {
+public class Prescription {
 
     private String userID;
     private String prescriptionID;

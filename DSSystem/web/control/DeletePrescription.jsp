@@ -4,9 +4,9 @@
 <jsp:setProperty name = "dbbean" property = "*" />
 
 
-<jsp:useBean id = "drug" class = "beans.Drugs" >
+<jsp:useBean id = "prescription" class = "beans.Prescription" >
 </jsp:useBean>
-<jsp:setProperty name = "drug" property = "*" /> 
+<jsp:setProperty name = "prescription" property = "*" /> 
 
 
 <!DOCTYPE html>

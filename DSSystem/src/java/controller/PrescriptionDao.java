@@ -1,6 +1,6 @@
 package controller;
 
-import beans.Drugs;
+import beans.Prescription;
 import java.sql.*;
 import database.ConnectionProvider;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.logging.*;
 
 public class PrescriptionDao {
 
-    public static void createPrescription(beans.Drugs d) {
+    public static void createPrescription(beans.Prescription d) {
 
         String userid = d.getUserID();
         String prescriptionid = d.getPrescriptionID();
