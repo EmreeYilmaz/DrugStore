@@ -32,11 +32,11 @@ public class DrugDao {
 
     }
 
-    public static ResultSet takeAllPrescription() throws SQLException {
+    public static ResultSet takeAllDrug() throws SQLException {
 
         Connection con = ConnectionProvider.getCon();
 
-        PreparedStatement pstmt = con.prepareStatement("select * from prescriptions");
+        PreparedStatement pstmt = con.prepareStatement("select * from drug");
 
         ResultSet rs = pstmt.executeQuery();
 
