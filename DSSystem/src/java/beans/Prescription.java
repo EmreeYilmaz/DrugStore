@@ -1,7 +1,4 @@
 package beans;
-
-
-
 public class Prescription {
 
     private String userID;

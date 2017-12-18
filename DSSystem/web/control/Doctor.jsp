@@ -32,7 +32,7 @@
                     </li>
 
                     <li>
-                        <a href="Register.html">Logout</a>
+                        <a href="addDrugPage.jsp">Logout</a>
                     </li>
                 </ul>
             </div>

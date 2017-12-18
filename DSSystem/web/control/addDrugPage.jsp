@@ -21,7 +21,7 @@
            
             String prescriptionid = request.getParameter("prescriptionID");
             String drugname = request.getParameter("drugName");
-             String type = request.getParameter("type");
+            String type = request.getParameter("type");
             String date = request.getParameter("date");
 
             if (prescriptionid != null && drugname != null) {

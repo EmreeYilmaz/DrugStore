@@ -32,7 +32,7 @@
                     </li>
 
                     <li>
-                        <a href="Register.html">Logout</a>
+                        <a href="addDrugPage.jsp">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -55,7 +55,7 @@
                         <label>Password: </label>
                         <input type="text" name="password"  placeholder="Password" onclick=" this.value = ''"/><br/>  
 
-                        <input type="submit" value="Register">
+                        <input type="submit" value="Edit">
                     </form>
                 </div>
             </div>
