@@ -27,12 +27,12 @@
                 </div>
                 <ul class="navigation">
                     <li>
-                        <a href="DoctorProfile.jsp">Doctor: <%= firstname%></a>
+                        <a href="Register.html">Doctor: <%= firstname%></a>
 
                     </li>
 
                     <li>
-                        <a href="addDrugPage.jsp">Logout</a>
+                        <a href="Register.html">Logout</a>
                     </li>
                 </ul>
             </div>

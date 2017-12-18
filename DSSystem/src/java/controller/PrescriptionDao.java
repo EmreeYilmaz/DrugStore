@@ -1,6 +1,6 @@
 package controller;
 
-import beans.Prescription;
+import beans.Drugs;
 import java.sql.*;
 import database.ConnectionProvider;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.logging.*;
 
 public class PrescriptionDao {
 
-    public static void createPrescription(beans.Prescription d) {
+    public static void createPrescription(beans.Drugs d) {
 
         String userid = d.getUserID();
         String prescriptionid = d.getPrescriptionID();
@@ -39,23 +39,5 @@ public class PrescriptionDao {
 
         return rs;
     }
-    
-     public static boolean deletePrescription(String id) throws SQLException {
-        try {
-
-            Connection con = ConnectionProvider.getCon();
-           
-            PreparedStatement pstmt = con.prepareStatement("delete from prescriptions where userID = ?");
-            pstmt.setString(1, id);
-            pstmt.executeUpdate();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return false;
-        }
-
-        return true;
-    }
-       
-   
 
 }

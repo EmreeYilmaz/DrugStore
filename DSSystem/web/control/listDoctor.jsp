@@ -1,5 +1,5 @@
 <%@page import="java.sql.ResultSet"%>
-<%@page import="controller.DrugDao"%>
+<%@page import="controller.DoctorDao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id = "dbbean" class = "controller.LoginDao" >
 </jsp:useBean>
@@ -16,7 +16,7 @@
         
        <%
       
-            ResultSet table = DrugDao.takeAllDrug();
+            ResultSet table = DoctorDao.takeAllDoctor();
 
         %>
         
@@ -40,19 +40,21 @@
             <div class="clearfix">
                 <div class="main">
                     <h1>All Drugs</h1>
-                    <form action="addDrugPage.jsp" method="post" class="message">
+                    <form action="addDoctorPage.jsp" method="post" class="message">
                         <table>
 
                             <tr>
                                 
 
-                                <th>Prescription ID</th>
+                                <th>First Name</th>
 
-                                <th>Drug Name</th>
+                                <th>Last Name</th>
+                                
+                                <th>Email</th>
+                                
+                                <th>Password</th>
                                 
                                 <th>Type</th>
-                                
-                                <th>Date</th>
                             </tr>
 
 
@@ -60,16 +62,19 @@
                             <tr>    
 
                                 <td>            
-                                    <%out.print(table.getString("prescriptionID"));%> 
+                                    <%out.print(table.getString("firstname"));%> 
                                 </td>
                                 <td>            
-                                    <%out.print(table.getString("drugName"));%> 
+                                    <%out.print(table.getString("lastname"));%> 
+                                </td>
+                                <td>
+                                    <%out.print(table.getString("email"));%>           
+                                </td>
+                                <td>
+                                    <%out.print(table.getString("password"));%>           
                                 </td>
                                 <td>
                                     <%out.print(table.getString("type"));%>           
-                                </td>
-                                <td>
-                                    <%out.print(table.getString("date"));%>           
                                 </td>
                                 <td>            
                                     <input type="radio" name="uid" value="">
