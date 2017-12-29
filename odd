@@ -1,0 +1,12 @@
+
+First of all, we defined variables in certain classes in the beans package. 
+This allows you to exchange data between the target database and the control.
+For example, when the user in the User class is pulling from the database, the username 
+in the user class in the beans matches the desired username and allows you to receive data
+from the database class. Another package is database.The database is the layer that provides 
+the communication between the beans and the control package.The database package provides our 
+connection with our existing database. And these packages we can make database operations easy.
+It contains our basic functions in the class of controls.
+The controls package includes of classes that contain the basic functions. 
+For example, we need a listing method to list user information. When we call 
+this method from where we want it,we can list our data. 
